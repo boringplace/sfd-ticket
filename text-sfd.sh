@@ -10,5 +10,6 @@ figlet -C utf8 -d figlet-fonts -c -f smmono12 'День Свободы ПО' >01
 patch <01-text-SFD-full-ru.txt.patch >/dev/null
 figlet -C utf8 -d figlet-fonts -w88 -f smmono12 "в 'Скучном месте'" > 02-text-at-boringplace-ru.txt
 
-cat *-text-*.txt >text-SFD-ru.txt
-#pandoc text-SFD-ru.txt -o text-SFD-ru.pdf
+mkdir -p ticket
+cat *-text-*.txt >ticket/text-SFD-ru.txt &&
+    echo "Ticket generated: ticket/text-SFD-ru.txt"
